@@ -1,0 +1,135 @@
+.hero.hero-editorial {
+  min-height: 540px;
+  padding: 44px 40px;
+  background-image: linear-gradient(90deg, rgba(7, 7, 7, .92), rgba(7, 7, 7, .38) 42%, rgba(7, 7, 7, 0) 70%), url("media/products/lilcutie-octa-coin-editorial.jpg");
+  background-position: center, center right;
+  background-size: cover;
+  animation: none;
+}
+
+.hero.hero-editorial::after { display: none; }
+.hero .hero-inner { min-height: 480px; grid-template-columns: 1fr; gap: 0; }
+.hero .hero-copy { max-width: 580px; }
+.hero h1 { font-size: 96px; line-height: 1.1; }
+.hero .hero-copy p { max-width: 390px; font-size: 20px; }
+.hero .kicker { margin-bottom: 20px; color: #d5d7da; }
+.announcement { background: #25272a; color: #e5e6e8; flex-wrap: wrap; gap: 8px 24px; }
+.brand span:last-child { color: #b9bdc2; }
+.btn, .small-btn, .language-select { border-radius: 4px; }
+.btn:disabled { cursor: not-allowed; opacity: .6; transform: none; }
+.checkout-note { color: #b9bdc2; font-size: 13px; line-height: 1.6; }
+.currency { color: #aeb3b9; font-size: 12px; font-weight: 400; }
+.product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.product-card { border: 0; border-radius: 0; background: transparent; }
+.product-info { padding: 18px 0; }
+.product-info h3 { font-size: 20px; }
+.product-info p { min-height: 42px; }
+.product-media { aspect-ratio: 4 / 5; background: #1b1c1e; }
+.product-card:first-child .product-media img { object-position: 76% center; }
+.product-media img { animation: none !important; }
+.product-badge { border-radius: 2px; background: rgba(10, 11, 13, .8); }
+.story { background: #17191b; color: #eceef0; }
+.story .kicker { color: #d3b879; }
+.story-copy p, .symbol span { color: #b8bdc2; }
+.story-visual { border-radius: 0; }
+.symbol { border: 0; border-top: 1px solid #4a4d51; border-radius: 0; background: transparent; padding: 16px 0; }
+.bundle-copy { border: 0; background: transparent; border-radius: 0; padding: 24px; }
+.bundle-products img { border-radius: 0; aspect-ratio: 4 / 5; }
+.bundle-products img:first-child { object-position: 76% center; }
+.review, .policy { border: 0; border-top: 1px solid #393c40; border-radius: 0; background: transparent; padding: 22px 0; }
+.track-form { border-radius: 4px; }
+.track-form p { color: #b8bdc2; margin: 0; }
+.section-heading h2, .story-copy h2 { font-size: 50px; line-height: 1.12; text-transform: none; }
+.section-heading > .kicker, .story-copy > .kicker, .bundle-copy > .kicker { display: none; }
+.detail-list li { align-items: baseline; }
+.detail-list strong { max-width: 62%; text-align: right; overflow-wrap: anywhere; }
+.modal-copy h2 { font-size: 36px; text-transform: none; }
+.modal-media { min-height: 0; align-content: start; grid-template-rows: auto auto; background: #0c0c0c; }
+.modal-stage { aspect-ratio: 4 / 5; min-height: 0; }
+.modal-stage img { min-height: 0; object-position: center; }
+.modal-stage img[src*="octa-coin-editorial"] { object-position: 76% center; }
+.gallery-thumb img { min-height: 0; }
+.modal-close-mobile { display: none; }
+:focus-visible { outline: 2px solid #e6c880; outline-offset: 4px; }
+[inert] { pointer-events: none; }
+.footer p { margin-top: 18px; }
+.mobile-nav > .close-button { position: absolute; top: 18px; right: 20px; }
+
+@media (min-width: 981px) {
+  .hero.hero-editorial { min-height: min(690px, calc(100svh - 150px)); }
+  .hero .hero-inner { min-height: min(600px, calc(100svh - 238px)); }
+}
+
+@media (max-width: 1100px) and (min-width: 981px) {
+  .site-header { gap: 14px; padding: 0 20px; }
+  .nav { gap: 14px; font-size: 12px; }
+  .header-actions { gap: 8px; }
+  .header-actions .nav-link { display: none; }
+}
+
+@media (max-width: 980px) {
+  .hero.hero-editorial { padding: 32px; min-height: 560px; background-position: center, 67% center; }
+  .hero .hero-inner { min-height: 496px; padding-top: 0; align-items: center; }
+  .hero h1 { font-size: 76px; }
+  .hero .hero-copy { max-width: 500px; }
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .story-grid, .bundle-grid { grid-template-columns: 1fr; }
+  .bundle-products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .bundle-copy { padding: 24px 0 0; }
+  .modal-stage { max-height: 450px; aspect-ratio: 1; }
+  .modal-media img { min-height: 0; }
+  .product-gallery { max-height: 110px; }
+  .gallery-thumb { height: 92px; aspect-ratio: auto; }
+}
+
+@media (max-width: 640px) {
+  .site-header { grid-template-columns: 42px minmax(0, 1fr) auto; padding: 0 12px; gap: 8px; min-height: 66px; }
+  .site-header .brand span:first-child { font-size: 15px; }
+  .site-header .brand span:last-child { display: none; }
+  .header-actions { gap: 6px; }
+  .language-select { max-width: 82px; min-height: 38px; font-size: 11px; }
+  .icon-button { min-width: 60px; min-height: 38px; padding: 0 8px; font-size: 11px; }
+  .cart-count { min-width: 17px; min-height: 17px; margin-left: 2px; font-size: 10px; }
+  .menu-button { min-width: 42px; min-height: 38px; font-size: 10px; padding: 0 4px; }
+  .hero.hero-editorial {
+    min-height: 550px;
+    padding: 30px 20px;
+    background-image: linear-gradient(0deg, rgba(7, 7, 7, .96), rgba(7, 7, 7, .8) 24%, rgba(7, 7, 7, 0) 72%), url("media/products/lilcutie-octa-coin-editorial.jpg");
+    background-position: center, 75% top;
+  }
+  .hero .hero-inner { min-height: 490px; padding: 0; align-items: end; }
+  .hero h1 { font-size: 48px; margin-bottom: 14px; }
+  .hero .hero-copy p { font-size: 16px; max-width: 310px; margin-bottom: 22px; }
+  .hero .kicker { margin-bottom: 12px; font-size: 10px; }
+  .hero .cta-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hero .btn { width: auto; padding: 0 16px; min-height: 44px; font-size: 12px; white-space: normal; text-align: center; }
+  .drop-track { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .drop-band { padding: 20px; }
+  .drop-item { gap: 10px; font-size: 11px; min-height: 50px; }
+  .drop-item strong { font-size: 12px; }
+  .mark { width: 25px; height: 25px; font-size: 10px; }
+  .section { padding: 56px 20px; }
+  .section-heading h2, .story-copy h2 { font-size: 34px; }
+  .product-grid { grid-template-columns: 1fr; gap: 32px; }
+  .product-info h3 { font-size: 19px; }
+  .card-actions { grid-template-columns: 1fr 1fr; }
+  .story-visual { min-height: 380px; }
+  .symbols { grid-template-columns: 1fr; }
+  .bundle-products { gap: 6px; }
+  .reviews-grid, .policy-grid { gap: 12px; }
+  .modal { width: calc(100vw - 20px); max-height: calc(100dvh - 20px); }
+  .modal-copy { padding: 22px; }
+  .modal-copy h2 { font-size: 28px; }
+  .modal-stage { aspect-ratio: 1; max-height: 390px; }
+  .modal-copy .close-button { position: absolute; top: 10px; right: 10px; background: #111; z-index: 2; }
+  .gallery-thumb { height: 76px; }
+  .product-gallery { max-height: 94px; }
+  .detail-list { font-size: 12px; }
+}
+
+@media (max-width: 350px) {
+  .site-header { padding: 0 8px; gap: 6px; }
+  .site-header .brand span:first-child { font-size: 13px; }
+  .language-select { max-width: 74px; padding: 0 4px; }
+  .hero h1 { font-size: 42px; }
+}

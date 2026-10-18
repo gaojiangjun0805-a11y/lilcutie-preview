@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="lilcutie is a global, genderless jewelry edit. First drop ships from China with tracked delivery.">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <title>lilcutie | First Edition Jewelry</title>
+  <meta name="description" content="LILCUTIE. Contemporary jewelry, worn your way. Discover the first collection preview.">
+  <meta name="theme-color" content="#070707">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>LILCUTIE | First Edition Jewelry</title>
   <style>
     :root {
       --bg: #070707;
@@ -1130,6 +1131,7 @@
       to { transform: scale(1.07); }
     }
   </style>
+  <link rel="stylesheet" href="launch.css">
 </head>
 <body>
   <div class="announcement">
@@ -1145,9 +1147,9 @@
       <a href="#story" data-i18n="navStory">Story</a>
       <a href="#shipping" data-i18n="navShipping">Shipping</a>
     </nav>
-    <button class="menu-button" type="button" data-menu-toggle aria-label="Open menu" data-i18n="menu">Menu</button>
-    <a class="brand" href="#" aria-label="lilcutie home">
-      <span>lilcutie</span>
+    <button class="menu-button" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" data-i18n="menu">Menu</button>
+    <a class="brand" href="#top" aria-label="LILCUTIE home">
+      <span>LILCUTIE</span>
       <span data-i18n="brandTagline">Meaningful Jewelry</span>
     </a>
     <div class="header-actions">
@@ -1163,7 +1165,8 @@
     </div>
   </header>
 
-  <nav class="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
+  <nav class="mobile-nav" id="mobileNav" data-mobile-nav aria-label="Mobile navigation">
+    <button class="close-button" type="button" data-menu-close aria-label="Close menu">X</button>
     <a href="#shop" data-i18n="navShop">Shop</a>
     <a href="#drops" data-i18n="navDrops">Drops</a>
     <a href="#story" data-i18n="navStory">Story</a>
@@ -1176,25 +1179,11 @@
       <div class="hero-inner">
         <div class="hero-copy">
           <div class="kicker" data-i18n="heroKicker">First edition / 2026</div>
-          <h1>lilcutie</h1>
+          <h1>LILCUTIE</h1>
           <p data-i18n="heroBody">Three polished forms, made to catch the light and move with you.</p>
           <div class="cta-row">
             <a class="btn" href="#shop" data-i18n="heroPrimary">Shop the first drop</a>
             <a class="btn secondary" href="#story" data-i18n="heroSecondary">Meet the pieces</a>
-          </div>
-        </div>
-        <div class="hero-proof" aria-label="Store promises" data-i18n-attr="aria-label:storePromises">
-          <div class="proof-line">
-            <strong>03</strong>
-            <span data-i18n="proofMaterial">Three forms. One first edition.</span>
-          </div>
-          <div class="proof-line">
-            <strong>7-15</strong>
-            <span data-i18n="proofDelivery">Business days estimated US delivery after dispatch.</span>
-          </div>
-          <div class="proof-line">
-            <strong>14</strong>
-            <span data-i18n="proofReturns">Day returns for unused items in original packaging.</span>
           </div>
         </div>
       </div>
@@ -1311,10 +1300,8 @@
           <p data-i18n="trackBody">This is the customer-facing tracking entry. Connect it to Shopify, 17TRACK, AfterShip, or your logistics app later.</p>
         </div>
         <form class="track-form" data-track-form>
-          <label for="orderNumber" data-i18n="trackLabel">Order number or tracking number</label>
-          <input id="orderNumber" name="orderNumber" placeholder="Example: LC1001 or YT tracking number" data-i18n-attr="placeholder:trackPlaceholder">
-          <button class="btn" type="submit" data-i18n="trackOrder">Track Order</button>
-          <span data-track-message></span>
+          <strong data-i18n="orderStatusTitle">Orders open soon</strong>
+          <p data-i18n="orderStatusBody">This collection is available to preview. Ordering and delivery details will be announced at launch.</p>
         </form>
       </div>
     </section>
@@ -1327,7 +1314,7 @@
           <p data-i18n="contactBody">Use a real support inbox before advertising. Fast replies, tracking updates, and honest delay messages reduce PayPal disputes and card chargebacks.</p>
         </div>
         <div class="policy-grid">
-          <article class="policy"><strong data-i18n="emailTitle">Email</strong><p>support@lilcutie.example</p></article>
+          <article class="policy"><strong data-i18n="emailTitle">Customer care</strong><p data-i18n="careBody">Customer care details will be published before orders open.</p></article>
           <article class="policy"><strong data-i18n="socialTitle">Social</strong><p data-i18n="socialBody">Instagram, X, and Facebook ads should all land on this storefront or a product page.</p></article>
           <article class="policy"><strong data-i18n="responseTitle">Response Time</strong><p data-i18n="responseBody">Target replies within 48 hours while order volume is still small.</p></article>
         </div>
@@ -1339,7 +1326,7 @@
     <div class="footer-inner">
       <div>
           <a class="brand" href="#top">
-            <span>lilcutie</span>
+            <span>LILCUTIE</span>
             <span data-i18n="brandTagline">Meaningful Jewelry</span>
           </a>
         <p data-i18n="footerBody">First edition jewelry. Styled globally, fulfilled from China.</p>
@@ -1354,7 +1341,7 @@
   </footer>
 
   <div class="drawer-backdrop" data-cart-backdrop></div>
-  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true" data-i18n-attr="aria-label:cartAria">
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true" tabindex="-1" inert data-i18n-attr="aria-label:cartAria">
     <div class="drawer-head">
       <strong data-i18n="yourCart">Your cart</strong>
       <button class="close-button" type="button" data-cart-close aria-label="Close cart" data-i18n-attr="aria-label:closeCart">X</button>
@@ -1362,13 +1349,13 @@
     <div class="cart-items" data-cart-items></div>
     <div class="drawer-foot">
       <div class="price-row"><span data-i18n="subtotal">Subtotal</span><strong data-cart-total>$0</strong></div>
-      <button class="btn" type="button" data-checkout data-i18n="checkout">Checkout</button>
-      <span class="kicker" data-i18n="checkoutNote">Checkout connects when the Shopify store is live.</span>
+      <button class="btn" type="button" data-checkout data-i18n="checkout" disabled>Orders open soon</button>
+      <span class="checkout-note" data-i18n="checkoutNote">Your selection is saved on this device. Payment is not open yet.</span>
     </div>
   </aside>
 
   <div class="modal-backdrop" data-modal-backdrop></div>
-  <section class="modal" data-product-modal aria-label="Product details" aria-hidden="true" data-i18n-attr="aria-label:productDetails">
+  <section class="modal" data-product-modal role="dialog" aria-modal="true" aria-label="Product details" aria-hidden="true" tabindex="-1" inert data-i18n-attr="aria-label:productDetails">
     <div class="modal-media">
       <div class="modal-stage"><img src="media/products/lilcutie-octa-coin-editorial.jpg" data-modal-image alt=""></div>
       <div class="product-gallery" data-product-gallery aria-label="Product image gallery"></div>
@@ -1377,14 +1364,14 @@
       <button class="close-button" type="button" data-modal-close aria-label="Close product details" data-i18n-attr="aria-label:closeProduct">X</button>
       <div class="kicker" data-modal-badge></div>
       <h2 data-modal-title></h2>
-      <div class="price-row"><strong data-modal-price></strong><span class="compare" data-modal-compare></span></div>
+      <div class="price-row"><strong data-modal-price></strong><span data-i18n="priceCurrency">USD</span></div>
       <p data-modal-story></p>
       <ul class="detail-list">
         <li><span data-i18n="detailMaterial">Material</span><strong data-modal-material></strong></li>
         <li><span data-i18n="detailFinish">Finish</span><strong data-modal-finish></strong></li>
         <li><span data-i18n="detailSize">Size</span><strong data-modal-size></strong></li>
         <li><span data-i18n="detailOrigin">Origin</span><strong data-i18n="originChina">China</strong></li>
-        <li><span data-i18n="detailDelivery">Delivery</span><strong data-i18n="deliveryWindow">7-15 business days</strong></li>
+        <li><span data-i18n="detailDelivery">Delivery</span><strong data-i18n="deliveryWindow">Announced at launch</strong></li>
       </ul>
       <button class="btn" type="button" data-modal-add data-i18n="addToCart">Add to cart</button>
     </div>
@@ -1392,6 +1379,7 @@
 
   <div class="toast" data-toast></div>
 
+  <script src="launch-copy.js"></script>
   <script>
     const supportedLanguages = ["en", "zh", "ja", "de", "es"];
 
@@ -2081,6 +2069,14 @@
       };
     });
 
+    Object.entries(window.LILCUTIE_LAUNCH_COPY).forEach(([locale, copy]) => {
+      translations[locale] = {
+        ...translations[locale],
+        ...copy,
+        products: { ...translations[locale].products, ...copy.products }
+      };
+    });
+
     const products = [
       {
         id: "octa-coin",
@@ -2117,14 +2113,28 @@
     const state = {
       cart: [],
       language: "en",
-      activeProduct: null
+      activeProduct: null,
+      galleryIndex: 0,
+      returnFocus: null
     };
 
     const money = (value) => `$${Number(value).toFixed(0)}`;
     const byId = (id) => products.find((product) => product.id === id);
     const qs = (selector) => document.querySelector(selector);
     const qsa = (selector) => Array.from(document.querySelectorAll(selector));
-    const t = (key) => translations[state.language]?.[key] || translations.en[key] || key;
+    const t = (key) => String(translations[state.language]?.[key] || translations.en[key] || key).replace(/\blilcutie\b/gi, "LILCUTIE");
+
+    function restoreCart() {
+      try {
+        const saved = JSON.parse(window.localStorage.getItem("lilcutie-cart") || "[]");
+        state.cart = Array.isArray(saved)
+          ? saved.filter((item) => item && byId(item.id) && Number.isInteger(item.qty) && item.qty > 0)
+            .map((item) => ({ id: item.id, qty: Math.min(item.qty, 99) }))
+          : [];
+      } catch {
+        state.cart = [];
+      }
+    }
 
     function getInitialLanguage() {
       try {
@@ -2187,13 +2197,13 @@
         return `
         <article class="product-card">
           <button class="product-media" type="button" data-product="${product.id}" aria-label="${t("viewProduct").replace("{product}", copy.title)}">
-            <img src="${product.image}" alt="${copy.title}">
+            <img src="${product.image}" alt="${copy.title}" loading="lazy" decoding="async" width="900" height="900">
             <span class="product-badge">${copy.badge}</span>
           </button>
           <div class="product-info">
             <h3>${copy.title}</h3>
             <p>${copy.story}</p>
-            <div class="price-row"><span>${money(product.price)}</span><span class="compare">${money(product.compare)}</span></div>
+            <div class="price-row"><span>${money(product.price)}</span><span class="currency">USD</span></div>
             <div class="card-actions">
               <button class="small-btn" type="button" data-product="${product.id}">${t("details")}</button>
               <button class="small-btn gold" type="button" data-add="${product.id}">${t("add")}</button>
@@ -2205,23 +2215,30 @@
     }
 
     function openCart() {
+      if (state.activeProduct) closeProduct();
+      state.returnFocus = document.activeElement;
+      qs("#cartDrawer").inert = false;
       qs("#cartDrawer").classList.add("active");
       qs("#cartDrawer").setAttribute("aria-hidden", "false");
       qs("[data-cart-backdrop]").classList.add("active");
       document.body.classList.add("drawer-open");
+      qs("[data-cart-close]").focus();
     }
 
     function closeCart() {
       qs("#cartDrawer").classList.remove("active");
       qs("#cartDrawer").setAttribute("aria-hidden", "true");
+      qs("#cartDrawer").inert = true;
       qs("[data-cart-backdrop]").classList.remove("active");
-      document.body.classList.remove("drawer-open");
+      if (!state.activeProduct) document.body.classList.remove("drawer-open");
+      if (state.returnFocus?.isConnected) state.returnFocus.focus();
     }
 
     function addToCart(id, open = true) {
+      if (!byId(id)) return;
       const item = state.cart.find((entry) => entry.id === id);
       if (item) {
-        item.qty += 1;
+        item.qty = Math.min(item.qty + 1, 99);
       } else {
         state.cart.push({ id, qty: 1 });
       }
@@ -2233,7 +2250,7 @@
     function changeQty(id, delta) {
       const item = state.cart.find((entry) => entry.id === id);
       if (!item) return;
-      item.qty += delta;
+      item.qty = Math.min(item.qty + delta, 99);
       if (item.qty <= 0) {
         state.cart = state.cart.filter((entry) => entry.id !== id);
       }
@@ -2241,6 +2258,11 @@
     }
 
     function renderCart() {
+      try {
+        window.localStorage.setItem("lilcutie-cart", JSON.stringify(state.cart));
+      } catch {
+        // Browsing still works when device storage is unavailable.
+      }
       const count = state.cart.reduce((total, item) => total + item.qty, 0);
       const subtotal = state.cart.reduce((total, item) => total + byId(item.id).price * item.qty, 0);
       qs("[data-cart-count]").textContent = count;
@@ -2273,20 +2295,23 @@
 
     function setGalleryImage(product, index) {
       const images = productImages(product);
+      index = Math.max(0, Math.min(index, images.length - 1));
+      state.galleryIndex = index;
       const image = images[index] || images[0];
       const copy = productCopy(product);
       qs("[data-modal-image]").src = image;
       qs("[data-modal-image]").alt = `${copy.title} ${index + 1}`;
       qsa("[data-gallery-index]").forEach((button) => {
         button.classList.toggle("active", Number(button.dataset.galleryIndex) === index);
+        button.setAttribute("aria-pressed", String(Number(button.dataset.galleryIndex) === index));
       });
     }
 
     function renderProductGallery(product) {
       const copy = productCopy(product);
       qs("[data-product-gallery]").innerHTML = productImages(product).map((image, index) => `
-        <button class="gallery-thumb ${index === 0 ? "active" : ""}" type="button" data-gallery-index="${index}" aria-label="View ${copy.title} image ${index + 1}">
-          <img src="${image}" alt="${copy.title} ${index + 1}">
+        <button class="gallery-thumb ${index === 0 ? "active" : ""}" type="button" data-gallery-index="${index}" aria-pressed="${index === 0}" aria-label="${t("galleryImage").replace("{product}", copy.title).replace("{number}", index + 1)}">
+          <img src="${image}" alt="${copy.title} ${index + 1}" loading="lazy" decoding="async">
         </button>
       `).join("");
       setGalleryImage(product, 0);
@@ -2294,32 +2319,37 @@
 
     function openProduct(id, show = true) {
       const product = byId(id);
+      if (!product) return;
       const copy = productCopy(product);
       state.activeProduct = id;
       renderProductGallery(product);
       qs("[data-modal-badge]").textContent = copy.badge;
       qs("[data-modal-title]").textContent = copy.title;
       qs("[data-modal-price]").textContent = money(product.price);
-      qs("[data-modal-compare]").textContent = money(product.compare);
       qs("[data-modal-story]").textContent = copy.story;
       qs("[data-modal-material]").textContent = copy.material;
       qs("[data-modal-finish]").textContent = copy.finish;
       qs("[data-modal-size]").textContent = copy.size;
       qs("[data-modal-add]").dataset.add = product.id;
       if (show) {
+        state.returnFocus = document.activeElement;
+        qs("[data-product-modal]").inert = false;
         qs("[data-product-modal]").classList.add("active");
         qs("[data-product-modal]").setAttribute("aria-hidden", "false");
         qs("[data-modal-backdrop]").classList.add("active");
         document.body.classList.add("drawer-open");
+        qs("[data-modal-close]").focus();
       }
     }
 
     function closeProduct() {
       qs("[data-product-modal]").classList.remove("active");
       qs("[data-product-modal]").setAttribute("aria-hidden", "true");
+      qs("[data-product-modal]").inert = true;
       qs("[data-modal-backdrop]").classList.remove("active");
       document.body.classList.remove("drawer-open");
       state.activeProduct = null;
+      if (state.returnFocus?.isConnected) state.returnFocus.focus();
     }
 
     function showToast(message) {
@@ -2331,7 +2361,8 @@
     }
 
     function toggleMenu() {
-      qs("[data-mobile-nav]").classList.toggle("active");
+      const active = qs("[data-mobile-nav]").classList.toggle("active");
+      qs("[data-menu-toggle]").setAttribute("aria-expanded", String(active));
     }
 
     function bindEvents() {
@@ -2362,6 +2393,7 @@
       qs("[data-modal-close]").addEventListener("click", closeProduct);
       qs("[data-modal-backdrop]").addEventListener("click", closeProduct);
       qs("[data-menu-toggle]").addEventListener("click", toggleMenu);
+      qs("[data-menu-close]").addEventListener("click", toggleMenu);
       qsa("[data-mobile-nav] a").forEach((link) => link.addEventListener("click", toggleMenu));
       qs("[data-language-select]").addEventListener("change", (event) => {
         setLanguage(event.target.value);
@@ -2373,7 +2405,6 @@
 
       qs("[data-track-form]").addEventListener("submit", (event) => {
         event.preventDefault();
-        qs("[data-track-message]").textContent = t("trackMessage");
       });
 
       document.addEventListener("keydown", (event) => {
@@ -2381,11 +2412,34 @@
           closeCart();
           closeProduct();
           qs("[data-mobile-nav]").classList.remove("active");
+          qs("[data-menu-toggle]").setAttribute("aria-expanded", "false");
+        }
+        if (state.activeProduct && (event.key === "ArrowRight" || event.key === "ArrowLeft")) {
+          event.preventDefault();
+          const product = byId(state.activeProduct);
+          const length = productImages(product).length;
+          const direction = event.key === "ArrowRight" ? 1 : -1;
+          setGalleryImage(product, (state.galleryIndex + direction + length) % length);
+        }
+        if (event.key === "Tab") {
+          const overlay = qs("[data-product-modal].active") || qs("#cartDrawer.active");
+          if (!overlay) return;
+          const controls = Array.from(overlay.querySelectorAll('button:not([disabled]), a[href], input, select, [tabindex="0"]'));
+          const first = controls[0];
+          const last = controls[controls.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
         }
       });
     }
 
     bindEvents();
+    restoreCart();
     setLanguage(getInitialLanguage());
   </script>
 </body>
